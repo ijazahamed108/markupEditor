@@ -1,0 +1,25 @@
+{
+  "name": "markupeditor-server",
+  "version": "1.0.1",
+  "description": "",
+  "author": {
+    "name": "Ijaz Ahammed",
+    "github": "https://github.com/ijazahamed108"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.15",
+    "jsonwebtoken": "^8.5.1",
+    "dompurify": "^2.3.6",
+    "jsdom": "^19.0.0",
+    "marked": "^4.0.12"
+  }
+}

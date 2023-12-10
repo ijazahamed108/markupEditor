@@ -1,0 +1,226 @@
+:root {
+    --primary: #0088ff;
+    --secondary: #4e4e4e;
+    --color-shadow: #aaa;
+}
+
+body {
+    color: var(--secondary);
+}
+
+#root, .App {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    margin: 0 auto;
+}
+
+.container {
+    width: 80vw;
+    margin: auto;  
+}
+
+.btn {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    cursor: pointer;
+    box-shadow: none;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.btn.btn-danger {
+    background-color: red;
+    color: white;
+}
+
+.btn.btn-danger.btn-outlined {
+    border-color: red;
+    background: transparent;
+    color: red;
+}
+
+.btn.btn-danger.btn-outlined:hover {
+    background-color: red;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.ide-container {
+    display: flex;
+    height: 96vh;
+    width: 80vw;
+    margin: auto; 
+    margin-top: 2vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--color-shadow);
+    overflow: hidden;
+}
+
+.pane-container {
+    position: relative;
+    width: 50%;
+    height: 100%; 
+    padding: 10px;
+}
+
+.pane-text {
+    font-family: monospace; 
+    height: 95%; 
+}
+
+.markdown-pane textarea {
+    width: 98%;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.html-pane {
+    border-radius: 10px;
+    box-shadow: -3px 0 10px var(--color-shadow);
+}
+
+.html-pane .pane-text{
+    word-wrap: break-word;
+    overflow: scroll;
+}
+
+.clear-btn {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+} 
+
+.download-btn {
+    position: sticky;
+    bottom: 15px;
+}
+
+.clear-btn, .download-btn {
+    opacity: 0.8;
+}
+
+.github-btn-container {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer ;
+    animation: fromTop 0.8s; 
+}
+
+.github-btn {
+    width: 30px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: width ease-in 0.3s;
+    transform: scale(1.2);
+}
+
+.github-btn svg {
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.github-btn-container, .github-btn {
+    border-radius: 15px;
+}
+
+.github-btn-text {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    color: transparent;
+    font-family: monospace;
+    font-size: 1.3em;
+    font-weight: 300;
+    transition: color ease-in 0.3s;
+}
+
+.github-btn-container:hover .github-btn {
+    width: 100%;
+}
+
+.github-btn-container:hover .github-btn-text {
+    color: white;
+}
+
+@media all and (max-width: 1000px) {
+    .ide-container{
+        width: 90vw;
+    }
+}
+@media all and (max-width: 850px) {
+
+    .ide-container{
+        flex-direction: column;
+        height: auto;
+        min-height: 94vh;
+    }
+
+    .pane-container {
+        width: 100%;
+        height: 94vh;
+    }
+
+    .download-btn {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        bottom: auto;
+    }
+
+    .clear-btn {
+        top: 60px
+    }
+} 
+
+.skeleton-animation {
+    background-color: #eee;
+    animation: skeleton 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes skeleton {
+    to {
+        opacity: 0.6;
+    }
+}
+
+
+@keyframes fromTop {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
