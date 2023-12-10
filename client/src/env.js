@@ -1,4 +1,4 @@
 module.exports = {
-    BACKEND_DOMAIN:"http://localhost:8080",
+    BACKEND_DOMAIN:"https://markup-editor-server.vercel.app/",
     APP_DOMAIN:"http://localhost:3000"
 }
